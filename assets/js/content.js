@@ -549,7 +549,7 @@
     ],
     author: "Mohamed Mahrous",
     role: "Software Engineer | .Net Developer",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQGKDRk05vIq7A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1700225671021?e=1757548800&v=beta&t=5p0X7nRr5Dibml1yzKkfTbNtUpTG9Sa3dNsRSCyta7g"
+    image: "assets/img/testimonial/03.jpeg"
   },
   {
     title: "Reliable Tech Expert with Business Insight",
@@ -561,7 +561,7 @@
     ],
     author: "Mahmoud Mansour",
     role: "Full Stack Developer at شركة عالم النظم والبرامج",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGSqKfhegHQzA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1678882747668?e=1757548800&v=beta&t=mDnWA38lmPohI_0nFb3UKO4TSYDyg-m1VzCMqHydlRI"
+    image: "assets/img/testimonial/04.jpeg"
   },
   {
     title: "Proactive Team Player with Strong Problem-Solving Skills",
@@ -571,7 +571,7 @@
     ],
     author: "Ashraf Ahmed Soliman",
     role: "IT Business Conultant",
-    image: "https://media.licdn.com/dms/image/v2/D4D35AQFeZ6G5LsrbfQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1715286421818?e=1752609600&v=beta&t=KoSn4RR3hJJIH-fAviKX68fwe6PY6nyNMQT9o79or0Q"
+    image: "assets/img/testimonial/01.jpeg"
   },
   {
     title: "Exceptional Developer and Inspiring Team Leader",
@@ -585,7 +585,7 @@
     ],
     author: "Ahmed Maatouk",
     role: "Turnover and Completions Manager",
-    image: "https://media.licdn.com/dms/image/v2/D4D35AQGwXcHbra9OHg/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1711916606088?e=1752840000&v=beta&t=jJ4WQ-Vvug86jnHUXavg17C08CBwK3C7Jn33Q5lhMR8"
+    image: "assets/img/testimonial/02.jpeg"
   },
   {
     title: "From Expert Developer to Strategic Architect",
@@ -594,7 +594,7 @@
     ],
     author: "Amr Adel",
     role: "Product Director @Future Group Translation & Localization | Fintech | Loyalty | Telecom | Driving Innovation",
-    image: "https://media.licdn.com/dms/image/v2/C5603AQFmvfy2LOoYxA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1545894819978?e=1757548800&v=beta&t=Vo3ZZkSva5XsI0zMZgh7O7-G5rEmJrsO3KFOz4flR_M"
+    image: "assets/img/testimonial/05.jpeg"
   }
 ];
 
