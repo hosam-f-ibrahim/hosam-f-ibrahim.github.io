@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FIU360: Financial Intelligence Platform | Hosam Ibrahim</title>
+  <meta name="description" content="How I led FIU360&#x27;s architecture for national financial intelligence units: one linked database, 100K+ records an hour of report intake, 90% less analyst effort.">
+  <link rel="canonical" href="https://hosam-f-ibrahim.github.io/fiu360.html">
+  <meta property="og:title" content="FIU360: Financial Intelligence Platform | Hosam Ibrahim">
+  <meta property="og:description" content="How I led FIU360&#x27;s architecture for national financial intelligence units: one linked database, 100K+ records an hour of report intake, 90% less analyst effort.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hosam-f-ibrahim.github.io/fiu360.html">
+  <meta property="og:site_name" content="Hosam Ibrahim">
+  <meta property="og:image" content="https://hosam-f-ibrahim.github.io/assets/img/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Hosam Ibrahim: Engineering Leader, Senior Solutions Architect, Senior Software Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "FIU360", "description": "How I led FIU360's architecture for national financial intelligence units: one linked database, 100K+ records an hour of report intake, 90% less analyst effort.", "url": "https://hosam-f-ibrahim.github.io/fiu360.html", "mainEntityOfPage": "https://hosam-f-ibrahim.github.io/fiu360.html", "author": {"@type": "Person", "@id": "https://hosam-f-ibrahim.github.io/#person", "name": "Hosam Ibrahim", "url": "https://hosam-f-ibrahim.github.io/"}, "about": "FIU360 financial intelligence platform", "image": "https://hosam-f-ibrahim.github.io/assets/img/og-card.png"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://hosam-f-ibrahim.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Selected work", "item": "https://hosam-f-ibrahim.github.io/#work"}, {"@type": "ListItem", "position": 3, "name": "FIU360", "item": "https://hosam-f-ibrahim.github.io/fiu360.html"}]}</script>
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preload" href="assets/fonts/questrial-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/brand.css" rel="stylesheet">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'assets/vendor/aos/aos.css'; document.head.appendChild(l);
+    }
+  </script>
+  <!-- Template: EasyFolio by BootstrapMade.com, https://bootstrapmade.com/license/ -->
+</head>
+<body class="inner-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0"><span class="sitename">Hosam Ibrahim</span></a>
+      <nav id="navmenu" class="navmenu" aria-label="Main">
+        <ul id="navlist">
+          <li><a href="index.html#work">Selected work</a></li>
+          <li><a href="index.html#help">How I can help</a></li>
+          <li><a href="index.html#career">Career</a></li>
+          <li><a href="index.html#recs">Recommendations</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a class="nav-cta" href="assets/HosamIbrahim.pdf" download>Resume (PDF)</a></li>
+        </ul>
+      </nav>
+      <a class="header-contact" href="index.html#contact">Contact</a>
+      <button class="mobile-nav-toggle" type="button" aria-controls="navlist" aria-expanded="false" aria-label="Menu"><i class="bi bi-list" aria-hidden="true"></i></button>
+      <div class="header-social-links">
+        <a href="https://www.linkedin.com/in/hosam-ibrahim/" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="mailto:hosam.fazie@hotmail.com" aria-label="Email hosam.fazie@hotmail.com"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </header>
+<style>.case-figure .t{font:600 13px "Roboto",Arial,sans-serif;fill:#0f2943;}
+.case-figure .s{font:400 11.5px "Roboto",Arial,sans-serif;fill:#33414f;}
+.case-figure .a{font:400 11px "Roboto",Arial,sans-serif;fill:#4f5d6b;}
+.case-figure .k{font:500 10.5px "Roboto",Arial,sans-serif;fill:#4f5d6b;letter-spacing:.04em;}
+.case-figure .kb{font:500 10.5px "Roboto",Arial,sans-serif;fill:#1f3a5f;letter-spacing:.04em;}
+.case-figure .m{font:700 11.5px "Roboto",Arial,sans-serif;fill:#1d5fa8;}
+.case-figure .bx{fill:#ffffff;stroke:#b9c6d6;stroke-width:1.2;}
+.case-figure .hot{fill:#ffffff;stroke:#1d5fa8;stroke-width:2;}
+.case-figure .ext{fill:#f5f8fc;stroke:#9FB2C8;stroke-width:1.2;stroke-dasharray:5 4;}
+.case-figure .zone{fill:#f5f8fc;stroke:#1f3a5f;stroke-width:1.5;}
+.case-figure .core{fill:#E8EEF6;stroke:#1f3a5f;stroke-width:1.5;}
+.case-figure .pill{fill:#EAF1FA;stroke:none;}
+.case-figure .ln{stroke:#1f3a5f;stroke-width:1.5;fill:none;}
+.case-figure .lnb{stroke:#1d5fa8;stroke-width:1.5;fill:none;}
+.case-figure .dash{stroke-dasharray:5 4;}
+.case-figure .node{fill:#ffffff;stroke:#1f3a5f;stroke-width:1.2;}</style>
+  <main class="main" id="main">
+
+    <div class="page-title">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item"><a href="index.html#work">Selected work</a></li><li class="breadcrumb-item active" aria-current="page">FIU360</li></ol></nav>
+        <div class="title-wrapper"><p class="case-eyebrow">Case study</p><h1>FIU360</h1><p class="case-meta">Mar 2020 – Sep 2026 · intelliSYS Solutions &amp; Consulting</p><p class="case-lead">A financial intelligence platform for national financial intelligence units, covering their full operating cycle, from incoming reports to intelligence disseminated to law enforcement. I led its architecture, design and delivery.</p></div>
+      </div>
+    </div>
+    <section class="section pt-2">
+      <div class="container case-body">
+        <div class="glance" role="region" aria-labelledby="glance-h"><h2 id="glance-h" class="visually-hidden">At a glance</h2><dl><div class="g-item"><dt>My role</dt><dd>Led the architecture, design and delivery; contributed hands-on to development, engineering-team leadership, delivery planning and coordination, and product and requirements decisions</dd></div><div class="g-item"><dt>Built for</dt><dd>National financial intelligence units, and, through AML PRO, the compliance officers who report to them</dd></div><div class="g-item"><dt>Standards</dt><dd>FATF recommendations and UN conventions</dd></div><div class="g-item"><dt>Scale</dt><dd>100K+ records an hour of end-to-end report intake, measured on a commodity server</dd></div><div class="g-item"><dt>Impact</dt><dd>90% less analyst effort across the operating cycle</dd></div><div class="g-item"><dt>Stack</dt><dd>C#, .NET and .NET Core; REST/Web APIs; Microsoft SQL Server; XML Schema, XPath and XQuery; Vue.js; DevExpress; Azure DevOps</dd></div></dl></div>
+        <div class="case-sec" data-aos="fade-up"><h2>The problem</h2>
+          <p>A financial intelligence unit is the national body that receives reports from banks and other reporting entities, analyzes them and passes intelligence to law enforcement. Building the system it runs on means solving several hard problems at once.</p>
+          <ul class="case-list"><li>Reports arrive from many reporting entities, in formats the unit itself defines, and each one has to be validated before anyone can rely on it.</li><li>The value of a report is in its connections: the people, entities, accounts and transactions it shares with everything the unit already holds.</li><li>Analysts need data from outside the report, from financial, national, international and open sources, and gathering it by hand is slow and error-prone.</li><li>The whole cycle has to meet FATF and UN standards and stay configurable as each unit&#x27;s requirements change.</li></ul>
+        </div>
+        <div class="case-sec" data-aos="fade-up"><h2>The decision that shapes everything: one linked core</h2>
+          <p>FIU360 does not store reports as documents to be read later. Every report is broken into the objects it carries, with the links between them, and integrated into one core database. Screening, enrichment, search, analytics, visualization and case management all work on that same picture.</p>
+          <p>That is why a new report about a person or account the unit already knows arrives as intelligence connected to everything already held, not as one more file in a queue. Around the core, each stage of the cycle is a module aligned to one functional area, so the capabilities work together while each stays configurable, and the platform comes in three editions, so a unit can start with the modules it needs and upgrade later.</p>
+          <figure class="case-figure" id="d1">
+            <h3>The full operating cycle on one linked core</h3>
+            <div class="scroller" tabindex="0" role="group" aria-label="Diagram, scroll sideways on small screens"><svg viewBox="0 0 1220 600" role="img" aria-label="Reports from reporting entities pass through ingestion, screening, enrichment, analytics and case management to dissemination to law enforcement; ingestion, enrichment, analytics and case management work on one linked core database, supported by shared platform services.">
+  <defs>
+    <marker id="d1a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#1F3A5F"/></marker>
+    <marker id="d1b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#1D5FA8"/></marker>
+  </defs>
+
+  <!-- outside left -->
+  <rect x="10" y="150" width="160" height="110" rx="6" class="ext"/>
+  <text x="24" y="172" class="k">OUTSIDE THE FIU</text>
+  <text x="24" y="194" class="t">Reporting entities</text>
+  <text x="24" y="213" class="s">CTR, STR, EFT, AIF</text>
+  <text x="24" y="229" class="s">and other reports</text>
+  <text x="24" y="249" class="m">AML PRO on their side</text>
+
+  <!-- outside top -->
+  <rect x="500" y="8" width="310" height="52" rx="6" class="ext"/>
+  <text x="514" y="28" class="k">EXTERNAL SOURCES</text>
+  <text x="514" y="48" class="s">Financial · national and international · open</text>
+
+  <!-- outside right -->
+  <rect x="1090" y="150" width="122" height="110" rx="6" class="ext"/>
+  <text x="1102" y="172" class="k">OUTSIDE</text>
+  <text x="1102" y="194" class="t">Law enforcement</text>
+  <text x="1102" y="211" class="t">agencies</text>
+  <text x="1102" y="232" class="a">receive intelligence</text>
+
+  <!-- platform zone -->
+  <rect x="196" y="86" width="874" height="500" rx="10" class="zone"/>
+  <text x="214" y="108" class="kb">FIU360 PLATFORM</text>
+  <rect x="852" y="94" width="202" height="24" rx="12" class="pill"/>
+  <text x="953" y="110" class="m" text-anchor="middle">Platform: 90% less analyst effort</text>
+
+  <!-- main row: 6 stages, w=130, gap=16, start x=214 -->
+  <g>
+    <rect x="214" y="150" width="130" height="110" rx="6" class="hot"/>
+    <text x="226" y="171" class="k">1</text>
+    <text x="226" y="190" class="t">Collection and</text>
+    <text x="226" y="206" class="t">ingestion</text>
+    <rect x="222" y="226" width="114" height="24" rx="12" class="pill"/>
+    <text x="279" y="242" class="m" text-anchor="middle">100K+ records/hour</text>
+
+    <rect x="360" y="150" width="130" height="110" rx="6" class="bx"/>
+    <text x="372" y="171" class="k">2</text>
+    <text x="372" y="190" class="t">Sanctions</text>
+    <text x="372" y="206" class="t">screening</text>
+    <text x="372" y="230" class="a">watchlists · alerts</text>
+    <text x="372" y="245" class="a">auto-escalation</text>
+
+    <rect x="506" y="150" width="130" height="110" rx="6" class="hot"/>
+    <text x="518" y="171" class="k">3</text>
+    <text x="518" y="190" class="t">Enrichment</text>
+    <text x="518" y="206" class="s">FIU360 Connect</text>
+    <rect x="514" y="226" width="114" height="24" rx="12" class="pill"/>
+    <text x="571" y="242" class="m" text-anchor="middle">99% data accuracy</text>
+
+    <rect x="652" y="150" width="130" height="110" rx="6" class="hot"/>
+    <text x="664" y="171" class="k">4</text>
+    <text x="664" y="190" class="t">Search and</text>
+    <text x="664" y="206" class="t">analytics</text>
+    <text x="664" y="230" class="a">AI search · LLM</text>
+    <text x="664" y="245" class="a">analytics · graphs</text>
+
+    <rect x="798" y="150" width="130" height="110" rx="6" class="bx"/>
+    <text x="810" y="171" class="k">5</text>
+    <text x="810" y="190" class="t">Case</text>
+    <text x="810" y="206" class="t">management</text>
+    <text x="810" y="230" class="a">layered access</text>
+    <text x="810" y="245" class="a">AML/CFT module</text>
+
+    <rect x="944" y="150" width="110" height="110" rx="6" class="bx"/>
+    <text x="956" y="171" class="k">6</text>
+    <text x="956" y="190" class="t">Dissemination</text>
+    <text x="956" y="230" class="a">automated</text>
+    <text x="956" y="245" class="a">distribution</text>
+  </g>
+
+  <!-- main flow arrows -->
+  <path d="M170,205 L210,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M344,205 L356,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M490,205 L502,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M636,205 L648,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M782,205 L794,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M928,205 L940,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M1054,205 L1086,205" class="ln" marker-end="url(#d1a)"/>
+
+  <!-- external sources into enrichment -->
+  <path d="M571,60 L571,146" class="lnb dash" marker-end="url(#d1b)"/>
+  <text x="563" y="122" class="a" text-anchor="end">fetch on report receipt</text>
+  <text x="563" y="136" class="a" text-anchor="end">or analyst request</text>
+
+  <!-- analyst request loop: analytics back to enrichment -->
+  <path d="M717,150 L717,134 L610,134 L610,146" class="lnb dash" marker-end="url(#d1b)"/>
+  <text x="664" y="128" class="a" text-anchor="middle">analyst request</text>
+
+  <!-- core database -->
+  <rect x="214" y="330" width="840" height="74" rx="8" class="core"/>
+  <text x="634" y="358" class="t" text-anchor="middle">FIU360 core database: one linked picture</text>
+  <text x="634" y="380" class="s" text-anchor="middle">reports · persons · entities · accounts · transactions · identifications · and many more object types, with the links between them</text>
+
+  <!-- stage to core arrows with labels -->
+  <path d="M250,260 L250,326" class="ln" marker-end="url(#d1a)"/>
+  <text x="258" y="300" class="a">writes linked</text>
+  <text x="258" y="313" class="a">objects</text>
+  <path d="M542,260 L542,326" class="ln" marker-end="url(#d1a)"/>
+  <text x="550" y="300" class="a">adds</text>
+  <text x="550" y="313" class="a">enrichment</text>
+  <path d="M700,264 L700,326" class="ln" marker-start="url(#d1a)" marker-end="url(#d1a)"/>
+  <text x="708" y="300" class="a">searches,</text>
+  <text x="708" y="313" class="a">indexes, graphs</text>
+  <path d="M846,264 L846,326" class="ln" marker-start="url(#d1a)" marker-end="url(#d1a)"/>
+  <text x="854" y="300" class="a">opens and</text>
+  <text x="854" y="313" class="a">updates cases</text>
+
+  <!-- shared services -->
+  <text x="214" y="446" class="k">SHARED PLATFORM SERVICES</text>
+  <g>
+    <rect x="214" y="458" width="156" height="64" rx="6" class="bx"/>
+    <text x="226" y="482" class="t">Registration</text>
+    <text x="226" y="500" class="a">with role-based access</text>
+    <rect x="385" y="458" width="156" height="64" rx="6" class="bx"/>
+    <text x="397" y="482" class="t">Access control</text>
+    <text x="397" y="500" class="a">role-based and layered</text>
+    <rect x="556" y="458" width="156" height="64" rx="6" class="bx"/>
+    <text x="568" y="482" class="t">Documents</text>
+    <text x="568" y="500" class="a">attachments · full-text search</text>
+    <rect x="727" y="458" width="156" height="64" rx="6" class="bx"/>
+    <text x="739" y="482" class="t">Statistics</text>
+    <text x="739" y="500" class="a">one-click FATF reports</text>
+    <rect x="898" y="458" width="156" height="64" rx="6" class="bx"/>
+    <text x="910" y="482" class="t">BI dashboards</text>
+    <text x="910" y="500" class="a">drag-and-drop</text>
+  </g>
+  <!-- registration authorizes reporting entities -->
+  <path d="M214,490 L90,490 L90,264" class="lnb dash" marker-end="url(#d1b)"/>
+  <text x="98" y="420" class="a">registers and</text>
+  <text x="98" y="434" class="a">authorizes</text>
+  <!-- statistics and BI read core -->
+  <path d="M805,454 L805,408" class="ln" marker-end="url(#d1a)"/>
+  <path d="M976,454 L976,408" class="ln" marker-end="url(#d1a)"/>
+  <text x="984" y="438" class="a">read</text>
+  <text x="813" y="438" class="a">read</text>
+
+  <text x="214" y="560" class="a">Modular and configurable · FATF and UN standards · encryption · Agile delivery · CI/CD in Azure DevOps · C#/.NET, REST APIs, SQL Server, Vue.js</text>
+</svg></div>
+            <figcaption>Every report enters through one pipeline and becomes part of a single linked database. Enrichment, analytics and case management work on that same picture, so analysts work on each new report as linked intelligence rather than as a file. Ingestion throughput and enrichment accuracy are shown on the components that achieved them; the reduction in analyst effort is a platform-wide result.</figcaption>
+          </figure>
+        </div>
+        <div class="case-sec" data-aos="fade-up"><h2>Report intake: correctness first, then throughput</h2>
+          <p>Collection runs through a configurable XML engine with 300+ parameters that define exactly what each report type must contain: CTR, STR, EFT and AIF. Every submitted report is validated against its XML schema, staged in the internal database and checked by a business-rule engine before any of its data reaches analysts.</p>
+          <p>Only then is it broken into every object it carries, from reports, persons, entities, accounts, transactions and identifications to many more, with the relationships between them, and integrated as linked, investigation-ready intelligence. The pipeline sustains 100K+ records an hour end to end, measured on a commodity server.</p>
+          <figure class="case-figure" id="d2">
+            <h3>Report ingestion: from submitted XML to investigation-ready intelligence</h3>
+            <div class="scroller" tabindex="0" role="group" aria-label="Diagram, scroll sideways on small screens"><svg viewBox="0 0 1220 440" role="img" aria-label="A submitted XML report is validated against its schema, staged, checked by a business-rule engine, broken into linked objects and integrated into the core database, at more than 100,000 records an hour end to end, measured on a commodity server.">
+  <defs>
+    <marker id="d2a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#1F3A5F"/></marker>
+  </defs>
+  <!-- throughput bracket -->
+  <path d="M176,40 L176,30 L1004,30 L1004,40" class="lnb"/>
+  <text x="590" y="22" class="m" text-anchor="middle">100K+ records/hour end to end, measured on a commodity server</text>
+
+  <!-- source -->
+  <rect x="10" y="70" width="120" height="96" rx="6" class="ext"/>
+  <text x="22" y="92" class="k">REPORTING</text>
+  <text x="22" y="106" class="k">ENTITY</text>
+  <text x="22" y="128" class="t">XML report</text>
+  <text x="22" y="146" class="a">via FIU360 portal</text>
+
+  <!-- steps: w=150, gap=20, start 176 -->
+  <rect x="176" y="62" width="150" height="112" rx="6" class="bx"/>
+  <text x="188" y="84" class="k">1</text>
+  <text x="188" y="104" class="t">Schema validation</text>
+  <text x="188" y="124" class="a">against XSD</text>
+  <text x="188" y="140" class="a">configurable engine,</text>
+  <text x="188" y="156" class="a">300+ parameters</text>
+
+  <rect x="346" y="62" width="150" height="112" rx="6" class="bx"/>
+  <text x="358" y="84" class="k">2</text>
+  <text x="358" y="104" class="t">Staging</text>
+  <text x="358" y="124" class="a">loaded into the</text>
+  <text x="358" y="140" class="a">internal database</text>
+
+  <rect x="516" y="62" width="150" height="112" rx="6" class="bx"/>
+  <text x="528" y="84" class="k">3</text>
+  <text x="528" y="104" class="t">Business-rule engine</text>
+  <text x="528" y="124" class="a">validates content</text>
+  <text x="528" y="140" class="a">against FIU rules</text>
+
+  <rect x="686" y="62" width="150" height="112" rx="6" class="hot"/>
+  <text x="698" y="84" class="k">4</text>
+  <text x="698" y="104" class="t">Object and link</text>
+  <text x="698" y="120" class="t">extraction</text>
+  <text x="698" y="140" class="a">every object the</text>
+  <text x="698" y="156" class="a">report carries</text>
+
+  <rect x="856" y="62" width="150" height="112" rx="6" class="bx"/>
+  <text x="868" y="84" class="k">5</text>
+  <text x="868" y="104" class="t">Integration</text>
+  <text x="868" y="124" class="a">into the FIU360</text>
+  <text x="868" y="140" class="a">core database</text>
+
+  <rect x="1046" y="70" width="164" height="96" rx="6" class="core"/>
+  <text x="1058" y="94" class="t">Ready for analysts</text>
+  <text x="1058" y="114" class="a">linked, investigation-ready</text>
+  <text x="1058" y="130" class="a">intelligence</text>
+
+  <path d="M130,118 L172,118" class="ln" marker-end="url(#d2a)"/>
+  <path d="M326,118 L342,118" class="ln" marker-end="url(#d2a)"/>
+  <path d="M496,118 L512,118" class="ln" marker-end="url(#d2a)"/>
+  <path d="M666,118 L682,118" class="ln" marker-end="url(#d2a)"/>
+  <path d="M836,118 L852,118" class="ln" marker-end="url(#d2a)"/>
+  <path d="M1006,118 L1042,118" class="ln" marker-end="url(#d2a)"/>
+
+  <!-- what step 4 produces: a small graph -->
+  <path d="M761,174 L761,206" class="ln dash"/>
+  <rect x="430" y="210" width="780" height="214" rx="8" fill="#F5F7FA" stroke="#B9C6D6"/>
+  <text x="448" y="234" class="k">WHAT ONE REPORT BECOMES</text>
+  <!-- edges -->
+  <g class="ln">
+    <line x1="820" y1="320" x2="640" y2="270"/>
+    <line x1="820" y1="320" x2="640" y2="375"/>
+    <line x1="820" y1="320" x2="1000" y2="270"/>
+    <line x1="820" y1="320" x2="1000" y2="375"/>
+    <line x1="820" y1="320" x2="820" y2="400"/>
+    <line x1="640" y1="270" x2="520" y2="320"/>
+    <line x1="640" y1="375" x2="1000" y2="375"/>
+    <line x1="1000" y1="270" x2="1110" y2="320"/>
+  </g>
+  <!-- nodes -->
+  <rect x="770" y="306" width="100" height="28" rx="14" fill="#1F3A5F"/>
+  <text x="820" y="324" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="Source Sans 3, Arial">Report</text>
+  <rect x="592" y="256" width="96" height="28" rx="14" class="node"/><text x="640" y="274" class="s" text-anchor="middle">Person</text>
+  <rect x="592" y="361" width="96" height="28" rx="14" class="node"/><text x="640" y="379" class="s" text-anchor="middle">Account</text>
+  <rect x="952" y="256" width="96" height="28" rx="14" class="node"/><text x="1000" y="274" class="s" text-anchor="middle">Entity</text>
+  <rect x="952" y="361" width="96" height="28" rx="14" class="node"/><text x="1000" y="379" class="s" text-anchor="middle">Transaction</text>
+  <rect x="460" y="306" width="120" height="28" rx="14" class="node"/><text x="520" y="324" class="s" text-anchor="middle">Identification</text>
+  <rect x="1060" y="306" width="110" height="28" rx="14" class="node" stroke-dasharray="4 3"/><text x="1115" y="324" class="s" text-anchor="middle">many more types</text>
+  <rect x="770" y="388" width="100" height="24" rx="12" class="node" stroke-dasharray="4 3"/><text x="820" y="404" class="a" text-anchor="middle">…</text>
+  <text x="448" y="412" class="a">objects and the links between them</text>
+</svg></div>
+            <figcaption>Each submitted report passes schema validation and a business-rule engine before any data reaches analysts. It is then broken into every object it carries, with the relationships between them, and integrated into the core database, ready for analysts to work on as linked intelligence rather than as a document. The pipeline sustains more than 100,000 records an hour end to end, measured on a commodity server.</figcaption>
+          </figure>
+        </div>
+        <div class="case-sec" data-aos="fade-up"><h2>From linked data to intelligence</h2>
+          <p>Incoming data is screened against sanctions lists, with selective matching to cut false positives, alerts, case confirmation, whitelisting of repeated false positives and escalation of confirmed cases. A process designer lets administrators attach a workflow to any report or case type; when a report arrives, FIU360 assigns its first step to the right staff member and tracks the time spent on each task.</p>
+          <p>Analysts search and update persons, accounts, entities, transactions, phones and addresses through AI-driven search that builds links, profiles and associations between them, and use LLM-powered analytics for both operational and strategic intelligence. Investigations run in case management built on four layers: access control, security settings, case types and the AML/CFT case module. Scanned and office documents attach to the intelligence database with their text extracted for search.</p>
+          <p>FATF statistics take one click, BI dashboards are drag-and-drop with drill-down and can be delivered to decision-makers&#x27; inboxes, and dissemination to law enforcement is automated. Throughout, role-based access control, detailed auditing, encryption and logging of every user action protect the data, and IT administrators can maintain the system without accessing sensitive data. Across the cycle, the platform cut analyst effort by 90%.</p>
+        </div>
+        <div class="case-sec" data-aos="fade-up"><h2>Two add-ons: FIU360 Connect and enhanced visualization</h2>
+          <p>I also architected two add-ons that extend FIU360, and other existing FIU and AML systems, without changing their code base. The enrichment add-on was first built for other FIU systems and later connected to FIU360; I continued its design and development as FIU360 Connect.</p>
+          <p>The moment a report arrives, or whenever an analyst asks, FIU360 Connect reaches out to financial, national, international and open sources, then cleanses, deduplicates and normalizes what comes back through parallel, multithreaded ETL pipelines, so analysts see the reported data and its enrichment side by side. Reliability was designed in rather than added later: validation, error handling and retry logic, data secured in transit with TLS, third-party API providers held to SLAs, and production monitoring in Application Insights. Connect delivers 99% data accuracy, cut acquisition latency by 99% and reduced enrichment failures by more than 90%.</p>
+          <figure class="case-figure" id="d3">
+            <h3>FIU360 Connect: enrichment without manual look-ups</h3>
+            <div class="scroller" tabindex="0" role="group" aria-label="Diagram, scroll sideways on small screens"><svg viewBox="0 0 1220 296" role="img" aria-label="When a report arrives or an analyst asks, automated workflows fetch data from financial, national and international, and open sources, then cleanse, deduplicate and normalize it, validate it with retries, and add it to the core database.">
+  <defs>
+    <marker id="d3a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#1F3A5F"/></marker>
+  </defs>
+  <!-- triggers -->
+  <text x="10" y="44" class="k">TRIGGERS</text>
+  <rect x="10" y="56" width="150" height="52" rx="6" class="bx"/>
+  <text x="22" y="80" class="t">Report received</text>
+  <text x="22" y="97" class="a">automatic</text>
+  <rect x="10" y="124" width="150" height="52" rx="6" class="bx"/>
+  <text x="22" y="148" class="t">Analyst request</text>
+  <text x="22" y="165" class="a">ad hoc</text>
+
+  <!-- workflows -->
+  <rect x="210" y="70" width="170" height="92" rx="6" class="hot"/>
+  <text x="222" y="96" class="t">Automated</text>
+  <text x="222" y="112" class="t">acquisition workflows</text>
+  <rect x="218" y="128" width="154" height="24" rx="12" class="pill"/>
+  <text x="295" y="144" class="m" text-anchor="middle">99% lower latency</text>
+  <path d="M160,82 L185,82 L185,104 L206,104" class="ln" marker-end="url(#d3a)"/>
+  <path d="M160,150 L185,150 L185,128 L206,128" class="ln" marker-end="url(#d3a)"/>
+
+  <!-- sources -->
+  <text x="430" y="30" class="k">SOURCES</text>
+  <rect x="430" y="40" width="200" height="40" rx="6" class="ext"/>
+  <text x="444" y="65" class="t">Financial</text>
+  <rect x="430" y="96" width="200" height="40" rx="6" class="ext"/>
+  <text x="444" y="121" class="t">National and international</text>
+  <rect x="430" y="152" width="200" height="40" rx="6" class="ext"/>
+  <text x="444" y="177" class="t">Open sources</text>
+  <path d="M380,100 L405,100 L405,60 L426,60" class="ln" marker-end="url(#d3a)"/>
+  <path d="M380,116 L426,116" class="ln" marker-end="url(#d3a)"/>
+  <path d="M380,132 L405,132 L405,172 L426,172" class="ln" marker-end="url(#d3a)"/>
+  <text x="392" y="210" class="a" text-anchor="middle">fetch</text>
+
+  <!-- ETL -->
+  <rect x="680" y="70" width="190" height="92" rx="6" class="hot"/>
+  <text x="692" y="96" class="t">ETL pipelines</text>
+  <text x="692" y="113" class="a">cleanse · deduplicate · normalize</text>
+  <text x="692" y="128" class="a">parallel, multithreaded</text>
+  <rect x="688" y="134" width="150" height="22" rx="11" class="pill"/>
+  <text x="763" y="149" class="m" text-anchor="middle">99% data accuracy</text>
+  <path d="M630,60 L655,60 L655,104 L676,104" class="ln" marker-end="url(#d3a)"/>
+  <path d="M630,116 L676,116" class="ln" marker-end="url(#d3a)"/>
+  <path d="M630,172 L655,172 L655,128 L676,128" class="ln" marker-end="url(#d3a)"/>
+  <text x="655" y="210" class="a" text-anchor="middle">raw data</text>
+
+  <!-- validation -->
+  <rect x="910" y="70" width="150" height="92" rx="6" class="bx"/>
+  <text x="922" y="96" class="t">Validation</text>
+  <text x="922" y="113" class="a">error handling</text>
+  <text x="922" y="128" class="a">retry logic</text>
+  <rect x="918" y="134" width="134" height="22" rx="11" class="pill"/>
+  <text x="985" y="149" class="m" text-anchor="middle">&gt;90% fewer failures</text>
+  <path d="M870,116 L906,116" class="ln" marker-end="url(#d3a)"/>
+  <path d="M1006,166 L1006,186 L922,186 L922,166" class="ln dash" marker-end="url(#d3a)"/>
+  <text x="964" y="202" class="a" text-anchor="middle">retry</text>
+
+  <!-- core -->
+  <rect x="1100" y="70" width="112" height="92" rx="6" class="core"/>
+  <text x="1112" y="96" class="t">Core database</text>
+  <text x="1112" y="113" class="a">enrichment linked</text>
+  <text x="1112" y="128" class="a">to the report</text>
+  <path d="M1060,116 L1096,116" class="ln" marker-end="url(#d3a)"/>
+
+  <!-- monitoring -->
+  <rect x="210" y="246" width="1002" height="40" rx="6" fill="#0B1F33"/>
+  <text x="228" y="271" font-size="12" fill="#9FB7D3" font-family="Source Sans 3, Arial">Monitored in production with Application Insights · an add-on that extends FIU360 and other existing FIU systems without changing their code base</text>
+</svg></div>
+            <figcaption>Before FIU360 Connect, analysts gathered enrichment data by hand. Connect fetches it automatically the moment a report arrives, or whenever an analyst asks, then cleans, deduplicates and validates it, retrying on failure, before linking it to the report. It is an add-on: it extends FIU360, and other existing FIU systems, without changing their code base.</figcaption>
+          </figure>
+          <h3 class="case-sub">Enhanced visualization</h3>
+          <p>Standard visualization tools show only some of the objects in a database. The enhanced visualization add-on renders every object and relationship stored in the system and maps them across external databases through dynamic connectors, giving analysts one connected view. Pre-aggregating relationship data in SQL Server views and stored procedures cut its load times by 50%.</p>
+        </div>
+        <div class="case-sec" data-aos="fade-up"><h2>Both sides of the exchange</h2>
+          <p>Reports start with reporting entities, so I also delivered AML PRO, which their compliance officers use to bring in data from spreadsheets and organizational databases, correct inconsistencies before submission and submit compliant XML reports from day one.</p>
+        </div>
+        <div class="case-sec" data-aos="fade-up"><h2>How I worked</h2>
+          <p>I joined intelliSYS in October 2019 as a Senior Software Engineer, led the engineering team from December 2019, led FIU360&#x27;s architecture from March 2020 and led engineering as a whole from January to September 2026, with FIU360 within my responsibilities.</p>
+          <p>Alongside the architecture, I contributed hands-on to development, engineering-team leadership, delivery planning and coordination, and product and requirements decisions. I championed Agile delivery and CI/CD in Azure DevOps, enforced pull-request reviews and branching strategies, and mentored engineers in full-stack architecture, data engineering and AI integration. In the same years I led discovery, demos and proposals with clients, so the solutions I designed in pre-sales were the ones I then had to deliver.</p>
+        </div>
+        <aside class="case-cta" aria-labelledby="cta-h">
+          <h2 id="cta-h">Need a financial intelligence system designed or extended?</h2>
+          <p>Send a few lines on the system, the problem, the timeline and whether the work is on-site or remote.</p>
+          <div class="btns"><a class="btn-pill solid" href="mailto:hosam.fazie@hotmail.com?subject=Project%20enquiry"><i class="bi bi-envelope" aria-hidden="true"></i> Email about a project</a><a class="btn-pill line" href="assets/HosamIbrahim.pdf" download>Download resume (PDF)</a></div>
+        </aside>
+        <nav class="case-next" aria-label="More case studies"><a href="aml-pro.html">Next: AML PRO <i class="bi bi-arrow-right" aria-hidden="true"></i></a><a href="learning-clarity.html">Learning Clarity <i class="bi bi-arrow-right" aria-hidden="true"></i></a></nav>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <p class="copyright mb-0">© <span class="sitename">Hosam Ibrahim</span>. All rights reserved.</p>
+      <ul class="foot-links">
+        <li><a href="https://www.linkedin.com/in/hosam-ibrahim/">LinkedIn</a></li>
+        <li><a href="assets/HosamIbrahim.pdf" download>Resume (PDF)</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
