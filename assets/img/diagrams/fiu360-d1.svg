@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 600" role="img" aria-label="Reports from reporting entities pass through ingestion, screening, enrichment, analytics and case management to dissemination to law enforcement; ingestion, enrichment, analytics and case management work on one linked core database, supported by shared platform services."><style>@font-face{font-family:"Roboto";font-weight:400;src:url(../../fonts/roboto-latin-400-normal.woff2) format("woff2")}@font-face{font-family:"Roboto";font-weight:500;src:url(../../fonts/roboto-latin-500-normal.woff2) format("woff2")}@font-face{font-family:"Roboto";font-weight:700;src:url(../../fonts/roboto-latin-700-normal.woff2) format("woff2")}  .t{font:600 14.56px "Roboto",Arial,sans-serif;fill:#0f2943;}
+  .s{font:400 12.88px "Roboto",Arial,sans-serif;fill:#33414f;}
+  .a{font:400 12.32px "Roboto",Arial,sans-serif;fill:#4f5d6b;}
+  .k{font:500 11.76px "Roboto",Arial,sans-serif;fill:#4f5d6b;letter-spacing:.04em;}
+  .kb{font:500 11.76px "Roboto",Arial,sans-serif;fill:#1f3a5f;letter-spacing:.04em;}
+  .m{font:700 12.88px "Roboto",Arial,sans-serif;fill:#1d5fa8;}
+  .bx{fill:#ffffff;stroke:#b9c6d6;stroke-width:1.2;}
+  .hot{fill:#ffffff;stroke:#1d5fa8;stroke-width:2;}
+  .ext{fill:#f5f8fc;stroke:#9FB2C8;stroke-width:1.2;stroke-dasharray:5 4;}
+  .zone{fill:#f5f8fc;stroke:#1f3a5f;stroke-width:1.5;}
+  .core{fill:#E8EEF6;stroke:#1f3a5f;stroke-width:1.5;}
+  .pill{fill:#EAF1FA;stroke:none;}
+  .ln{stroke:#1f3a5f;stroke-width:1.5;fill:none;}
+  .lnb{stroke:#1d5fa8;stroke-width:1.5;fill:none;}
+  .dash{stroke-dasharray:5 4;}
+  .node{fill:#ffffff;stroke:#1f3a5f;stroke-width:1.2;}</style>
+  <defs>
+    <marker id="d1a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#1F3A5F"/></marker>
+    <marker id="d1b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#1D5FA8"/></marker>
+  </defs>
+
+  <!-- outside left -->
+  <rect x="10" y="150" width="160" height="110" rx="6" class="ext"/>
+  <text x="24" y="172" class="k">OUTSIDE THE FIU</text>
+  <text x="24" y="194" class="t">Reporting entities</text>
+  <text x="24" y="213" class="s">CTR, STR, EFT, AIF</text>
+  <text x="24" y="229" class="s">and other reports</text>
+  <text x="24" y="249" class="m">AML PRO on their side</text>
+
+  <!-- outside top -->
+  <rect x="500" y="8" width="310" height="52" rx="6" class="ext"/>
+  <text x="514" y="28" class="k">EXTERNAL SOURCES</text>
+  <text x="514" y="48" class="s">Financial · national and international · open</text>
+
+  <!-- outside right -->
+  <rect x="1090" y="150" width="122" height="110" rx="6" class="ext"/>
+  <text x="1102" y="172" class="k">OUTSIDE</text>
+  <text x="1102" y="192" class="t">Law</text>
+  <text x="1102" y="208" class="t">enforcement</text>
+  <text x="1102" y="224" class="t">agencies</text>
+  <text x="1102" y="244" class="a">receive intelligence</text>
+
+  <!-- platform zone -->
+  <rect x="196" y="86" width="874" height="500" rx="10" class="zone"/>
+  <text x="214" y="108" class="kb">FIU360 PLATFORM</text>
+  <rect x="852" y="94" width="202" height="24" rx="12" class="pill"/>
+  <text x="953" y="110" class="m" text-anchor="middle">Platform: 90% less analyst effort</text>
+
+  <!-- main row: 6 stages, w=130, gap=16, start x=214 -->
+  <g>
+    <rect x="214" y="150" width="130" height="110" rx="6" class="hot"/>
+    <text x="226" y="171" class="k">1</text>
+    <text x="226" y="190" class="t">Collection and</text>
+    <text x="226" y="206" class="t">ingestion</text>
+    <rect x="218" y="226" width="122" height="24" rx="12" class="pill"/>
+    <text x="279" y="242" class="m" text-anchor="middle">100K+ records/hour</text>
+
+    <rect x="360" y="150" width="130" height="110" rx="6" class="bx"/>
+    <text x="372" y="171" class="k">2</text>
+    <text x="372" y="190" class="t">Sanctions</text>
+    <text x="372" y="206" class="t">screening</text>
+    <text x="372" y="230" class="a">watchlists · alerts</text>
+    <text x="372" y="245" class="a">auto-escalation</text>
+
+    <rect x="506" y="150" width="130" height="110" rx="6" class="hot"/>
+    <text x="518" y="171" class="k">3</text>
+    <text x="518" y="190" class="t">Enrichment</text>
+    <text x="518" y="206" class="s">FIU360 Connect</text>
+    <rect x="510" y="226" width="122" height="24" rx="12" class="pill"/>
+    <text x="571" y="242" class="m" text-anchor="middle">99% data accuracy</text>
+
+    <rect x="652" y="150" width="130" height="110" rx="6" class="hot"/>
+    <text x="664" y="171" class="k">4</text>
+    <text x="664" y="190" class="t">Search and</text>
+    <text x="664" y="206" class="t">analytics</text>
+    <text x="664" y="230" class="a">AI search · LLM</text>
+    <text x="664" y="245" class="a">analytics · graphs</text>
+
+    <rect x="798" y="150" width="130" height="110" rx="6" class="bx"/>
+    <text x="810" y="171" class="k">5</text>
+    <text x="810" y="190" class="t">Case</text>
+    <text x="810" y="206" class="t">management</text>
+    <text x="810" y="230" class="a">layered access</text>
+    <text x="810" y="245" class="a">AML/CFT module</text>
+
+    <rect x="944" y="150" width="110" height="110" rx="6" class="bx"/>
+    <text x="956" y="171" class="k">6</text>
+    <text x="956" y="190" class="t">Dissemination</text>
+    <text x="956" y="230" class="a">automated</text>
+    <text x="956" y="245" class="a">distribution</text>
+  </g>
+
+  <!-- main flow arrows -->
+  <path d="M170,205 L210,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M344,205 L356,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M490,205 L502,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M636,205 L648,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M782,205 L794,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M928,205 L940,205" class="ln" marker-end="url(#d1a)"/>
+  <path d="M1054,205 L1086,205" class="ln" marker-end="url(#d1a)"/>
+
+  <!-- external sources into enrichment -->
+  <path d="M571,60 L571,146" class="lnb dash" marker-end="url(#d1b)"/>
+  <text x="563" y="122" class="a" text-anchor="end">fetch on report receipt</text>
+  <text x="563" y="136" class="a" text-anchor="end">or analyst request</text>
+
+  <!-- analyst request loop: analytics back to enrichment -->
+  <path d="M717,150 L717,134 L610,134 L610,146" class="lnb dash" marker-end="url(#d1b)"/>
+  <text x="664" y="128" class="a" text-anchor="middle">analyst request</text>
+
+  <!-- core database -->
+  <rect x="214" y="330" width="840" height="74" rx="8" class="core"/>
+  <text x="634" y="358" class="t" text-anchor="middle">FIU360 core database: one linked picture</text>
+  <text x="634" y="380" class="s" text-anchor="middle">reports · persons · entities · accounts · transactions · identifications · and many more object types, with the links between them</text>
+
+  <!-- stage to core arrows with labels -->
+  <path d="M250,260 L250,326" class="ln" marker-end="url(#d1a)"/>
+  <text x="258" y="300" class="a">writes linked</text>
+  <text x="258" y="313" class="a">objects</text>
+  <path d="M542,260 L542,326" class="ln" marker-end="url(#d1a)"/>
+  <text x="550" y="300" class="a">adds</text>
+  <text x="550" y="313" class="a">enrichment</text>
+  <path d="M700,264 L700,326" class="ln" marker-start="url(#d1a)" marker-end="url(#d1a)"/>
+  <text x="708" y="300" class="a">searches,</text>
+  <text x="708" y="313" class="a">indexes, graphs</text>
+  <path d="M846,264 L846,326" class="ln" marker-start="url(#d1a)" marker-end="url(#d1a)"/>
+  <text x="854" y="300" class="a">opens and</text>
+  <text x="854" y="313" class="a">updates cases</text>
+
+  <!-- shared services -->
+  <text x="214" y="446" class="k">SHARED PLATFORM SERVICES</text>
+  <g>
+    <rect x="214" y="458" width="156" height="64" rx="6" class="bx"/>
+    <text x="226" y="482" class="t">Registration</text>
+    <text x="226" y="500" class="a">with role-based access</text>
+    <rect x="385" y="458" width="156" height="64" rx="6" class="bx"/>
+    <text x="397" y="482" class="t">Access control</text>
+    <text x="397" y="500" class="a">role-based and layered</text>
+    <rect x="556" y="458" width="156" height="64" rx="6" class="bx"/>
+    <text x="568" y="482" class="t">Documents</text>
+    <text x="568" y="499" class="a">attachments ·</text>
+    <text x="568" y="514" class="a">full-text search</text>
+    <rect x="727" y="458" width="156" height="64" rx="6" class="bx"/>
+    <text x="739" y="482" class="t">Statistics</text>
+    <text x="739" y="500" class="a">one-click FATF reports</text>
+    <rect x="898" y="458" width="156" height="64" rx="6" class="bx"/>
+    <text x="910" y="482" class="t">BI dashboards</text>
+    <text x="910" y="500" class="a">drag-and-drop</text>
+  </g>
+  <!-- registration authorizes reporting entities -->
+  <path d="M214,490 L90,490 L90,264" class="lnb dash" marker-end="url(#d1b)"/>
+  <text x="98" y="420" class="a">registers and</text>
+  <text x="98" y="434" class="a">authorizes</text>
+  <!-- statistics and BI read core -->
+  <path d="M805,454 L805,408" class="ln" marker-end="url(#d1a)"/>
+  <path d="M976,454 L976,408" class="ln" marker-end="url(#d1a)"/>
+  <text x="984" y="438" class="a">read</text>
+  <text x="813" y="438" class="a">read</text>
+
+  <text x="214" y="560" class="a">Modular and configurable · FATF and UN standards · encryption · Agile delivery · CI/CD in Azure DevOps · C#/.NET, REST APIs, SQL Server, Vue.js</text>
+</svg>

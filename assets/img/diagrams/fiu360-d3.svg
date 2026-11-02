@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 296" role="img" aria-label="When a report arrives or an analyst asks, automated workflows fetch data from financial, national and international, and open sources, then cleanse, deduplicate and normalize it, validate it with retries, and add it to the core database."><style>@font-face{font-family:"Roboto";font-weight:400;src:url(../../fonts/roboto-latin-400-normal.woff2) format("woff2")}@font-face{font-family:"Roboto";font-weight:500;src:url(../../fonts/roboto-latin-500-normal.woff2) format("woff2")}@font-face{font-family:"Roboto";font-weight:700;src:url(../../fonts/roboto-latin-700-normal.woff2) format("woff2")}  .t{font:600 14.56px "Roboto",Arial,sans-serif;fill:#0f2943;}
+  .s{font:400 12.88px "Roboto",Arial,sans-serif;fill:#33414f;}
+  .a{font:400 12.32px "Roboto",Arial,sans-serif;fill:#4f5d6b;}
+  .k{font:500 11.76px "Roboto",Arial,sans-serif;fill:#4f5d6b;letter-spacing:.04em;}
+  .kb{font:500 11.76px "Roboto",Arial,sans-serif;fill:#1f3a5f;letter-spacing:.04em;}
+  .m{font:700 12.88px "Roboto",Arial,sans-serif;fill:#1d5fa8;}
+  .bx{fill:#ffffff;stroke:#b9c6d6;stroke-width:1.2;}
+  .hot{fill:#ffffff;stroke:#1d5fa8;stroke-width:2;}
+  .ext{fill:#f5f8fc;stroke:#9FB2C8;stroke-width:1.2;stroke-dasharray:5 4;}
+  .zone{fill:#f5f8fc;stroke:#1f3a5f;stroke-width:1.5;}
+  .core{fill:#E8EEF6;stroke:#1f3a5f;stroke-width:1.5;}
+  .pill{fill:#EAF1FA;stroke:none;}
+  .ln{stroke:#1f3a5f;stroke-width:1.5;fill:none;}
+  .lnb{stroke:#1d5fa8;stroke-width:1.5;fill:none;}
+  .dash{stroke-dasharray:5 4;}
+  .node{fill:#ffffff;stroke:#1f3a5f;stroke-width:1.2;}</style>
+  <defs>
+    <marker id="d3a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#1F3A5F"/></marker>
+  </defs>
+  <!-- triggers -->
+  <text x="10" y="44" class="k">TRIGGERS</text>
+  <rect x="10" y="56" width="150" height="52" rx="6" class="bx"/>
+  <text x="22" y="80" class="t">Report received</text>
+  <text x="22" y="97" class="a">automatic</text>
+  <rect x="10" y="124" width="150" height="52" rx="6" class="bx"/>
+  <text x="22" y="148" class="t">Analyst request</text>
+  <text x="22" y="165" class="a">ad hoc</text>
+
+  <!-- workflows -->
+  <rect x="210" y="70" width="170" height="92" rx="6" class="hot"/>
+  <text x="222" y="96" class="t">Automated</text>
+  <text x="222" y="112" class="t">acquisition workflows</text>
+  <rect x="218" y="128" width="154" height="24" rx="12" class="pill"/>
+  <text x="295" y="144" class="m" text-anchor="middle">99% lower latency</text>
+  <path d="M160,82 L185,82 L185,104 L206,104" class="ln" marker-end="url(#d3a)"/>
+  <path d="M160,150 L185,150 L185,128 L206,128" class="ln" marker-end="url(#d3a)"/>
+
+  <!-- sources -->
+  <text x="430" y="30" class="k">SOURCES</text>
+  <rect x="430" y="40" width="200" height="40" rx="6" class="ext"/>
+  <text x="444" y="65" class="t">Financial</text>
+  <rect x="430" y="96" width="200" height="40" rx="6" class="ext"/>
+  <text x="444" y="121" class="t">National and international</text>
+  <rect x="430" y="152" width="200" height="40" rx="6" class="ext"/>
+  <text x="444" y="177" class="t">Open sources</text>
+  <path d="M380,100 L405,100 L405,60 L426,60" class="ln" marker-end="url(#d3a)"/>
+  <path d="M380,116 L426,116" class="ln" marker-end="url(#d3a)"/>
+  <path d="M380,132 L405,132 L405,172 L426,172" class="ln" marker-end="url(#d3a)"/>
+  <text x="392" y="210" class="a" text-anchor="middle">fetch</text>
+
+  <!-- ETL -->
+  <rect x="680" y="70" width="198" height="92" rx="6" class="hot"/>
+  <text x="692" y="96" class="t">ETL pipelines</text>
+  <text x="692" y="113" class="a">cleanse · deduplicate · normalize</text>
+  <text x="692" y="128" class="a">parallel, multithreaded</text>
+  <rect x="688" y="134" width="150" height="22" rx="11" class="pill"/>
+  <text x="763" y="149" class="m" text-anchor="middle">99% data accuracy</text>
+  <path d="M630,60 L655,60 L655,104 L676,104" class="ln" marker-end="url(#d3a)"/>
+  <path d="M630,116 L676,116" class="ln" marker-end="url(#d3a)"/>
+  <path d="M630,172 L655,172 L655,128 L676,128" class="ln" marker-end="url(#d3a)"/>
+  <text x="655" y="210" class="a" text-anchor="middle">raw data</text>
+
+  <!-- validation -->
+  <rect x="910" y="70" width="150" height="92" rx="6" class="bx"/>
+  <text x="922" y="96" class="t">Validation</text>
+  <text x="922" y="113" class="a">error handling</text>
+  <text x="922" y="128" class="a">retry logic</text>
+  <rect x="918" y="134" width="134" height="22" rx="11" class="pill"/>
+  <text x="985" y="149" class="m" text-anchor="middle">&gt;90% fewer failures</text>
+  <path d="M878,116 L906,116" class="ln" marker-end="url(#d3a)"/>
+  <path d="M1006,166 L1006,186 L922,186 L922,166" class="ln dash" marker-end="url(#d3a)"/>
+  <text x="964" y="202" class="a" text-anchor="middle">retry</text>
+
+  <!-- core -->
+  <rect x="1100" y="70" width="112" height="92" rx="6" class="core"/>
+  <text x="1112" y="96" class="t">Core database</text>
+  <text x="1112" y="113" class="a">enrichment linked</text>
+  <text x="1112" y="128" class="a">to the report</text>
+  <path d="M1060,116 L1096,116" class="ln" marker-end="url(#d3a)"/>
+
+  <!-- monitoring -->
+  <rect x="210" y="246" width="1002" height="40" rx="6" fill="#0B1F33"/>
+  <text x="228" y="271" font-size="12" fill="#9FB7D3" font-family="Source Sans 3, Arial">Monitored in production with Application Insights · an add-on that extends FIU360 and other existing FIU systems without changing their code base</text>
+</svg>
