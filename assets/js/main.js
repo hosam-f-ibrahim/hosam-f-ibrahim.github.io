@@ -3,7 +3,7 @@
 * Template URL: https://bootstrapmade.com/easyfolio-bootstrap-portfolio-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
-* Adapted: content is static HTML; accessible motion (pause control, reduced motion).
+* Adapted: content is static HTML; motion respects reduced-motion settings.
 */
 (function () {
   "use strict";
@@ -27,6 +27,8 @@
     const i = toggle.querySelector('i');
     i.classList.toggle('bi-list', !open);
     i.classList.toggle('bi-x', open);
+    // Keep keyboard focus inside the open menu: content behind the overlay is inert (WCAG 2.4.11)
+    ['main', '#footer', '.header-contact', '.logo', '#scroll-top', '.skip-link'].forEach((s) => { const e = document.querySelector(s); if (e) e.inert = open; });
     if (open) { const first = document.querySelector('#navmenu a'); first && first.focus(); }
   }
   if (toggle) {
@@ -49,6 +51,8 @@
   /* Reveal on scroll (template's AOS), off for reduced motion */
   window.addEventListener('load', () => {
     if (window.AOS) AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, mirror: false, disable: reduce });
+    // If the reveal script didn't load, drop its stylesheet so no content stays hidden
+    else document.querySelectorAll('link[href*="aos.css"]').forEach((l) => l.remove());
   });
 
   /* Hero parallax: blobs and portrait drift with the scroll (user-driven) */
@@ -65,41 +69,45 @@
     update();
   }
 
-  /* Operating cycle: plays once (under 5 s) when it comes into view; Replay button */
+  /* Operating cycle: replays automatically while it is on screen (owner, 2 Nov 2026); static for reduced motion */
   const track = document.getElementById('cycleTrack');
   if (track) {
     const stages = [...track.querySelectorAll('.stage')];
     const bar = track.querySelector('.cycle-progress');
     const core = document.getElementById('cycleCore');
-    const replay = document.getElementById('cycleReplay');
     const vertical = () => window.matchMedia('(max-width: 991px)').matches;
-    let timers = [];
+    let timers = [], inView = false;
     const setBar = (f) => {
       if (vertical()) { bar.style.width = ''; bar.style.height = `calc((100% - 56px) * ${f})`; }
       else { bar.style.height = ''; bar.style.width = `calc(84% * ${f})`; }
     };
     const finalState = () => { stages.forEach((s) => s.classList.add('lit')); core.classList.add('lit'); setBar(1); };
+    // Calm pace (owner, 2 Nov 2026): 1.2 s per stage, the full cycle holds for 4 s, then a 1.2 s pause before it starts again
+    const START = 1200, STEP = 1200, HOLD = 4000;
     const play = () => {
       timers.forEach(clearTimeout); timers = [];
       stages.forEach((s) => s.classList.remove('lit')); core.classList.remove('lit'); setBar(0);
-      stages.forEach((s, i) => timers.push(setTimeout(() => { s.classList.add('lit'); setBar(i / (stages.length - 1)); }, 300 + i * 620)));
-      timers.push(setTimeout(() => core.classList.add('lit'), 300 + stages.length * 620));
+      stages.forEach((s, i) => timers.push(setTimeout(() => { s.classList.add('lit'); setBar(i / (stages.length - 1)); }, START + i * STEP)));
+      timers.push(setTimeout(() => core.classList.add('lit'), START + stages.length * STEP));
+      timers.push(setTimeout(() => { if (inView && !document.hidden) play(); }, START + stages.length * STEP + HOLD));
     };
     if (reduce || !('IntersectionObserver' in window)) { finalState(); }
     else {
-      replay.hidden = false;
-      replay.addEventListener('click', play);
-      const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { play(); io.disconnect(); } }, { threshold: 0.45 });
+      const io = new IntersectionObserver((es) => {
+        const was = inView; inView = es[0].isIntersecting;
+        if (inView && !was) play();
+        if (!inView) { timers.forEach(clearTimeout); timers = []; finalState(); }
+      }, { threshold: 0.45 });
       io.observe(track);
+      document.addEventListener('visibilitychange', () => { if (!document.hidden && inView) play(); });
     }
     window.addEventListener('resize', () => { if (stages[stages.length - 1].classList.contains('lit')) setBar(1); });
   }
 
-  /* Recommendations carousel: moves slowly, pauses on hover/focus, has a visible Pause button */
+  /* Recommendations carousel: plays continuously (owner, 2 Nov 2026); holds while hovered or focused so a slide can be read; still for reduced motion */
   window.addEventListener('load', () => {
     const el = document.getElementById('recSlider');
     if (!el || !window.Swiper) return;
-    const pauseBtn = document.getElementById('recPause');
     const sw = new Swiper(el, {
       slidesPerView: 1, spaceBetween: 24, loop: true, speed: reduce ? 0 : 900, grabCursor: true,
       autoHeight: false, watchSlidesProgress: true,
@@ -110,18 +118,8 @@
       autoplay: reduce ? false : { delay: 6000, disableOnInteraction: false, pauseOnMouseEnter: true }
     });
     if (reduce) return;
-    let userPaused = false;
-    pauseBtn.hidden = false;
-    const label = pauseBtn.querySelector('span'), icon = pauseBtn.querySelector('i');
-    const render = () => {
-      label.textContent = userPaused ? 'Play' : 'Pause';
-      icon.className = userPaused ? 'bi bi-play-fill' : 'bi bi-pause-fill';
-      pauseBtn.setAttribute('aria-label', userPaused ? 'Play the recommendations carousel' : 'Pause the recommendations carousel');
-    };
-    pauseBtn.addEventListener('click', () => { userPaused = !userPaused; userPaused ? sw.autoplay.stop() : sw.autoplay.start(); render(); });
     el.addEventListener('focusin', () => sw.autoplay.stop());
-    el.addEventListener('focusout', () => { if (!userPaused) sw.autoplay.start(); });
-    render();
+    el.addEventListener('focusout', () => sw.autoplay.start());
   });
 
   /* Scrollspy (template) */
