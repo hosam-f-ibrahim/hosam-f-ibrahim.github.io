@@ -346,3 +346,139 @@ html{scroll-padding-top:128px}
 .testimonials .rec-link:focus-visible{outline:none}
 .testimonials .rec-link:focus-visible::after{outline:3px solid var(--accent-color);outline-offset:3px}
 @media(max-width:767px){.testimonials .featured .rec-text{max-height:calc(1.55em * 9)}}
+/* Home career timeline with one line per role; full Career page (owner, Q-315) */
+.resume .role-row{padding:0 0 18px}
+.resume .role-row:last-child{padding-bottom:0}
+.resume .role-row .position{margin:0 0 2px}
+.resume .role-row .position a{color:var(--heading-color);text-decoration:underline;text-decoration-color:var(--tint-2);text-underline-offset:4px}
+.resume .role-row .position a:hover{color:var(--accent-color);text-decoration-color:currentColor}
+.resume .role-row .role-when{margin:0 0 4px;color:var(--muted-color);font-size:15px}
+.resume .role-row .role-line{margin:0;color:#33414f;font-size:16px;line-height:1.6;max-width:68ch}
+.resume .career-more a{display:inline-flex;align-items:center;min-height:44px}
+.resume .role-row .role-more{margin:2px 0 0}
+.resume .role-row .role-more a{display:inline-flex;align-items:center;min-height:44px;font-weight:500;color:var(--accent-color);text-decoration:underline;text-underline-offset:3px}
+
+
+/* ===== Career page v3 (.cv3): roles only ===== */
+.cv3{
+  --cv3-s1:4px;--cv3-s2:8px;--cv3-s3:12px;--cv3-s4:16px;--cv3-s5:24px;
+  --cv3-s6:32px;--cv3-s7:40px;--cv3-s8:48px;--cv3-s9:64px;
+  --cv3-rail:12rem;--cv3-gap:2rem;
+  --cv3-offset:110px;
+  --cv3-rule:var(--tint-2);
+  color:var(--default-color);
+}
+@media(min-width:992px){.cv3{--cv3-rail:16rem;--cv3-gap:3rem;--cv3-offset:128px}}
+@media(min-width:1400px){.cv3{--cv3-rail:18rem}}
+
+/* Anchor targets land below the floating header (WCAG 2.4.11) */
+.cv3[id],.cv3 [id]{scroll-margin-top:var(--cv3-s4)}
+
+/* Headings: Questrial has only 400; never synthesise bold */
+.cv3 .cv3-h2,.cv3 .cv3-org__name,.cv3 .cv3-role__title{
+  font-family:var(--heading-font);font-weight:400;color:var(--heading-color);
+}
+.cv3 .cv3-h2{font-size:1.625rem;line-height:1.25;margin:0 0 var(--cv3-s5)}
+@media(min-width:992px){.cv3 .cv3-h2{font-size:1.875rem;margin-bottom:var(--cv3-s6)}}
+
+/* In-page nav: plain, wrapping, not sticky */
+.cv3-toc{margin-top:var(--cv3-s5)}
+.cv3-toc .cv3-toc__label{margin:0 0 var(--cv3-s1);font-size:.875rem;line-height:1.4;letter-spacing:.06em;text-transform:uppercase;color:var(--muted-color)}
+.cv3-toc__list{display:flex;flex-wrap:wrap;column-gap:var(--cv3-s5);row-gap:0;list-style:none;margin:0;padding:0;border-block:1px solid var(--cv3-rule)}
+.cv3-toc__list a{display:inline-flex;align-items:center;min-height:44px;font-size:1rem;font-weight:500;color:var(--accent-color);text-decoration:none}
+.cv3-toc__list a:hover{color:var(--accent-hover);text-decoration:underline;text-underline-offset:3px}
+
+/* Experience */
+.cv3-exp{padding:var(--cv3-s6) 0 var(--cv3-s8)}
+@media(min-width:992px){.cv3-exp{padding:var(--cv3-s8) 0 var(--cv3-s9)}}
+
+.cv3-org{padding-block:var(--cv3-s7);border-top:1px solid var(--cv3-rule)}
+.cv3-org:first-of-type{border-top:0;padding-top:0}
+.cv3-org__head{margin-bottom:var(--cv3-s4)}
+.cv3 .cv3-org__name{font-size:1.5rem;line-height:1.3;margin:0 0 var(--cv3-s1)}
+.cv3 .cv3-org__period{margin:0;font-size:1rem;line-height:1.5;color:var(--muted-color)}
+.cv3 .cv3-org__site{margin:0}
+.cv3 .cv3-org__site a{display:inline-flex;align-items:center;min-height:44px;font-size:1rem}
+
+@media(min-width:768px){
+  .cv3-org{display:grid;grid-template-columns:var(--cv3-rail) minmax(0,1fr);column-gap:var(--cv3-gap);align-items:start}
+  .cv3-org__head{grid-column:1;grid-row:1 / span 2;margin-bottom:0;align-self:start}
+  .cv3-roles,.cv3-xlinks{grid-column:2}
+}
+@media(min-width:992px){
+  .cv3-org{padding-block:var(--cv3-s8)}
+  .cv3-org__head{position:sticky;top:var(--cv3-offset)}
+}
+
+.cv3-roles{list-style:none;margin:0;padding:0}
+.cv3-role+.cv3-role{margin-top:var(--cv3-s6)}
+.cv3 .cv3-role__title{font-size:1.1875rem;line-height:1.3;margin:0 0 var(--cv3-s1)}
+@media(min-width:992px){.cv3 .cv3-role__title{font-size:1.25rem}}
+.cv3 .cv3-role__dates{margin:0 0 var(--cv3-s3);font-size:1rem;line-height:1.5;color:var(--muted-color)}
+.cv3-role__points{margin:0;padding-left:1.25em;max-width:68ch}
+.cv3-role__points li+li{margin-top:var(--cv3-s2)}
+.cv3-role__points li::marker{color:var(--muted-color)}
+
+/* Landing from home "Read more on this role": static, no layout shift */
+.cv3-role:target{
+  background:var(--tint-1);box-shadow:0 0 0 var(--cv3-s4) var(--tint-1);border-radius:4px;
+  outline:2px solid transparent;outline-offset:var(--cv3-s4); /* visible in forced-colors mode */
+}
+
+/* Optional cross-link line (D8) */
+.cv3-xlinks{display:flex;flex-wrap:wrap;align-items:center;column-gap:var(--cv3-s3);margin-top:var(--cv3-s5);font-size:1rem}
+.cv3 .cv3-xlinks__label{margin:0;color:var(--muted-color)}
+.cv3-xlinks ul{display:flex;flex-wrap:wrap;column-gap:var(--cv3-s5);list-style:none;margin:0;padding:0}
+.cv3-xlinks a{display:inline-flex;align-items:center;min-height:44px}
+
+/* Reference band: Skills, Education, Certifications, Languages */
+.cv3-ref{background-color:var(--background-color);padding:var(--cv3-s8) 0}
+@media(min-width:992px){.cv3-ref{padding:var(--cv3-s9) 0}}
+.cv3 .cv3-block{padding:0;background:transparent;overflow:visible}
+.cv3 .cv3-block+.cv3-block{margin-top:var(--cv3-s7);padding-top:var(--cv3-s7);border-top:1px solid var(--cv3-rule)}
+@media(min-width:992px){
+  .cv3 .cv3-block{display:grid;grid-template-columns:var(--cv3-rail) minmax(0,1fr);column-gap:var(--cv3-gap);align-items:start}
+  .cv3 .cv3-block .cv3-h2{margin:0}
+  .cv3 .cv3-block+.cv3-block{margin-top:var(--cv3-s8);padding-top:var(--cv3-s8)}
+}
+
+.cv3-kv{margin:0}
+.cv3-kv__row+.cv3-kv__row{margin-top:var(--cv3-s5)}
+.cv3-kv dt{margin:0 0 var(--cv3-s1);font-weight:500;color:var(--heading-color)}
+.cv3-kv dd{margin:0;max-width:68ch}
+
+.cv3-items{list-style:none;margin:0;padding:0}
+.cv3-item+.cv3-item{margin-top:var(--cv3-s4)}
+.cv3 .cv3-item__title{margin:0;font-weight:500;color:var(--heading-color)}
+.cv3 .cv3-item__meta{margin:0;font-size:1rem;line-height:1.5;color:var(--muted-color)}
+
+/* Motion: none on this page; honour reduced motion if main.css smooth-scrolls */
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Print (cheap; the Resume PDF stays canonical) */
+@media print{
+  body:has(.cv3) #header,body:has(.cv3) #footer,body:has(.cv3) #scroll-top,body:has(.cv3) #preloader,
+  .cv3-toc,.cv3-xlinks{display:none!important}
+  .cv3,.cv3-ref{background:#fff!important;color:#000;padding:0}
+  .cv3 .cv3-h2,.cv3 .cv3-org__name,.cv3 .cv3-role__title,.cv3-kv dt,.cv3 .cv3-item__title{color:#000}
+  .cv3 .cv3-org__period,.cv3 .cv3-role__dates,.cv3 .cv3-item__meta{color:#333}
+  .cv3-org__head{position:static}
+  .cv3-role,.cv3-kv__row,.cv3-item{break-inside:avoid}
+  .cv3 .cv3-h2,.cv3 .cv3-org__name,.cv3 .cv3-role__title{break-after:avoid}
+  .cv3-role:target{background:none;box-shadow:none}
+}
+
+/* director build notes: block body column, toc on centered page-title, PDF button */
+@media(min-width:992px){.cv3 .cv3-block .cv3-block__body{grid-column:2}}
+.page-title .cv3-toc{max-width:760px;margin-left:auto;margin-right:auto}
+.page-title .cv3-toc__list{justify-content:center}
+.cv3-pdf{margin:var(--cv3-s8) 0 0;text-align:center;max-width:none}
+.cv3-pdf .btn-pill{min-height:52px;padding:0 26px;border-radius:50px;display:inline-flex;align-items:center;font-weight:500;border:2px solid var(--accent-color);background:#fff;color:var(--accent-color);text-decoration:none}
+.cv3-pdf .btn-pill:hover{background:var(--tint-1)}
+.cv3 section,.cv3.cv3-exp{overflow:visible}
+.cv3-role__points{list-style:disc}
+.page-title .cv3-toc .cv3-toc__label{text-align:center;max-width:none}
+@media(min-width:768px) and (max-width:991.98px){.cv3{--cv3-rail:15.5rem;--cv3-gap:1.5rem}}
+@media print{.cv3-org__head{break-after:avoid;break-inside:avoid}.cv3-roles>.cv3-role:first-child{break-before:avoid}.cv3-pdf,.breadcrumbs{display:none!important}}
+.page-title h1{font-weight:400}
+.mobile-nav-toggle{flex-shrink:0;min-width:44px}
